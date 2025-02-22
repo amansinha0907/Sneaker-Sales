@@ -1,6 +1,9 @@
-About the Repository?
+**About the Repository?**
+
 This repository has some essential datasets you can use in Data Science.
-Data Analysis
+
+**Data Analysis**
+
 Airbnb
 Sneaker Sales
 Cricket Players
@@ -10,17 +13,25 @@ Job Postings
 Myntra Products
 OpenBook
 Swiggy Restaurants
-Machine Learning
+
+**Machine Learning**
+
 Sherlock
 Airbnb
 IMDB Movies
 Job Postings
-Deep Learning
+
+**Deep Learning**
+
 Airbnb
 IMDB Movies
-Computer Vision
+
+**Computer Vision**
+
 IMDB Celeb
-Natural Language Processing
+
+**Natural Language Processing**
+
 Gaana
 Sherlock
 Hindi Corpus
@@ -29,9 +40,3 @@ IMDB Movies
 Job Postings
 Myntra Products
 OpenBook
-Follow me on:
-
-LinkedIn
-GitHub
-Kaggle
-Stay updated with my latest content and projects! Your support helps me create more valuable resources for everyone.
