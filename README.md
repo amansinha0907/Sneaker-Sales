@@ -1,6 +1,3 @@
-**Objective 1: Analyzing Sales Performance
-**
-**Objective 2: Customer and Product Analysis
-**
-**Objective 3: Supplier and Product Performance
-**
+Objective 1: Analyzing Sales Performance /n/n
+Objective 2: Customer and Product Analysis \n\n
+Objective 3: Supplier and Product Performance \n\n
