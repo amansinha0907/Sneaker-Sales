@@ -1,3 +1,5 @@
+# Objectives of the project:-  
+
 Objective 1: Analyzing Sales Performance  
 
 Objective 2: Customer and Product Analysis  
