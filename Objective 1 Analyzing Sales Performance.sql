@@ -12,10 +12,8 @@ ORDER BY total_sales DESC;
 
 #2. How many products have been sold in each store location?
 
-SELECT S.StoreLocation, Count(S.ProductID) AS total_products_Sold
-FROM Sales S 
-GROUP BY S.StoreLocation
-ORDER BY total_products_Sold DESC;
+select storeLocation as "Location", sum(Quantity)as "product sold" from sales
+group by storeLocation order by storeLocation asc;
 
 #3. Which product category has the highest total sales amount?
 
@@ -23,7 +21,7 @@ SELECT P.Category, SUM(S.TotalAmount) AS total_sales
 FROM products P 
 JOIN sales S ON P.ProductID = S.ProductID 
 GROUP BY P.Category
-ORDER BY total_sales DESC;	
+ORDER BY total_sales DESC limit 1;	
 
 #4. What is the average quantity of products sold per sale?
 
@@ -34,10 +32,12 @@ select Round(AVG((S.Quantity)),0) AS AVG_Product_Per_Sale from sales S;
 select C.CustomerID, concat(C.FirstName ," ", C. LastName ) As FullName, Count(S.saleID) AS Nunber_Of_Purchases From customers C 
 Join Sales S on C.CustomerID = S.CustomerID 
 group by C.CustomerID, FullName
-order By Nunber_Of_Purchases DESC;
+order By Nunber_Of_Purchases DESC limit 1;
 
 #6. What is the distribution of total sales amounts across different months?
 
+select month(sales.Date), sum(TotalAmount)as total_sales from sales 
+group by month(sales.Date) order by month(sales.Date) asc;
 
 #7. How does the sales performance of different regions compare?
 
@@ -56,7 +56,6 @@ Select round(AVG(totalAmount),1)from sales;
 
 #10. How many sales transactions were made by each sales representative?
 
-Select SR.SalesRepID, concat(SR.FirstName," ",SR.LastName) AS FullName , Sum(S.TotalAmount)
-from sales_reprentative SR
-join sales S
-group by SR.SalesRepID, FullName;
+select sales_reprentative.SalesRepID, concat(FirstName," ",LastName) AS FullName , count(TotalAmount)as "Number of transaction" from sales_reprentative join sales
+on sales_reprentative.SalesRepID= sales.SalesRepID
+group by sales_reprentative.SalesRepID order by count(TotalAmount) desc, sales_reprentative.SalesRepID asc;
